@@ -9,7 +9,7 @@
   failed_when: >
     command_result.rc != 0 or
     not command_result.stdout|regex_search('\w+\.\w+\.\w+')
-  when: bat_version == ~
+  when: bat_version == ''
 
 - name: GENERAL | Set latest version of docker-compose
   set_fact:
