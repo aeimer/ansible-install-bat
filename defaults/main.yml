@@ -4,7 +4,7 @@
 gh_user: sharkdp
 gh_repo: bat
 gh_repo_url: "https://github.com/{{ gh_user }}/{{ gh_repo }}"
-bat_version: ~
+bat_version: ''
 
 # DEBIAN
 debian_url: ~
