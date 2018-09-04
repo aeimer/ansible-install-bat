@@ -7,7 +7,7 @@ sudo: required
 
 env:
   global:
-    - IDEM_CHANGED=4
+    - IDEM_CHANGED=3
     - IDEM_FAILED=0
 
 # Install ansible
