@@ -1,0 +1,12 @@
+---
+# General
+# If is ~, the latest stable version will be used
+gh_user: sharkdp
+gh_repo: bat
+bat_version: ~
+
+# ARM
+arm_url: "https://github.com/{{ gh_user }}/{{ gh_repo }}/releases/download/v{{ bat_version }}/bat-v{{ bat_version }}-arm-unknown-linux-gnueabihf.tar.gz"
+arm_tmp: /tmp/bat_tmp
+arm_target: /usr/local/bin/bat
+arm_filemode: 0755

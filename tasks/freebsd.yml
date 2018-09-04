@@ -1,0 +1,6 @@
+---
+# This is for FreeBSD
+- name: FreeBSD | Install via pkg
+  become: true
+  shell:
+    command: pkg install bat
