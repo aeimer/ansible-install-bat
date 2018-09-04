@@ -11,6 +11,6 @@
     command: "dpkg --install --yes {{ debian_tmp }}/bat.deb"
 
 - name: DEBIAN | Remove deb-file
-   file:
+  file:
     path: "{{ debian_tmp }}/bat.deb"
     state: absent
