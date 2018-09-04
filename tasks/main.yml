@@ -7,6 +7,11 @@
   when: bat_version == ''
   register: bat_version
 
+- name: GENERAL | Set URLs to download bins
+  set_fact:
+    debian_url: "{{ gh_repo_url }}/releases/download/v{{ bat_version }}/bat_{{ bat_version }}_amd64.deb"
+    arm_url: "{{ gh_repo_url }}/releases/download/v{{ bat_version }}/bat-v{{ bat_version }}-arm-unknown-linux-gnueabihf.tar.gz"
+
 - import_tasks: debian.yml
   when: ansible_os_family == 'Debian'
 
