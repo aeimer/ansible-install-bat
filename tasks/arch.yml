@@ -2,5 +2,6 @@
 # This is for Arch Linux
 - name: ARCH | Install by pacman
   become: true
-  shell:
-    command: pacman -S bat
+  pacman:
+    name: bat
+    state: present

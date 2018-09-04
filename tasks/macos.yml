@@ -2,5 +2,6 @@
 # This is for MacOS
 - name: MacOS | Install via Homebrew
   become: true
-  shell:
-    command: brew Install bat
+  homebrew:
+    name: bat
+    state: present
