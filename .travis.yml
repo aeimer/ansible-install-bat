@@ -16,10 +16,6 @@ addons:
     packages:
     - python-pip
 
-before_install:
-  # Make sure everything's up to date.
-  - sudo apt-get update -qq
-
 install:
   # Install ansible
   - pip install ansible
