@@ -5,6 +5,10 @@ gh_user: sharkdp
 gh_repo: bat
 bat_version: ~
 
+# DEBIAN
+debian_url: "https://github.com/{{ gh_user }}/{{ gh_repo }}/releases/download/v{{ bat_version }}/bat_{{ bat_version }}_amd64.deb"
+debian_tmp: /tmp
+
 # ARM
 arm_url: "https://github.com/{{ gh_user }}/{{ gh_repo }}/releases/download/v{{ bat_version }}/bat-v{{ bat_version }}-arm-unknown-linux-gnueabihf.tar.gz"
 arm_tmp: /tmp/bat_tmp

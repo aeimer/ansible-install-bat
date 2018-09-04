@@ -1,13 +1,5 @@
 ---
 # This is for arm
-- name: ARM | Get latest verion from github
-  github_release:
-    user: "{{ gh_user }}"
-    repo: "{{ gh_repo }}"
-    action: latest_release
-  when: "bat_version is empty"
-  register: bat_version
-
 - name: ARM | Unpack tar
   unarchive:
     src: "{{ arm_url }}"

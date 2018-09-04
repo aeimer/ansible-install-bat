@@ -1,4 +1,12 @@
 ---
+- name: GENERAL | Get latest verion from github
+  github_release:
+    user: "{{ gh_user }}"
+    repo: "{{ gh_repo }}"
+    action: latest_release
+  when: bat_version == ''
+  register: bat_version
+
 - import_tasks: debian.yml
   when: ansible_os_family == 'Debian'
 

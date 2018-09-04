@@ -2,14 +2,15 @@
 # This is for Debian/Ubuntu
 - name: DEBIAN | Download deb-file
   get_url:
-    url: 
+    url: "{{ debian_url }}"
+    dest: "{{ debian_tmp }}/bat.deb"
 
 - name: DEBIAN | Install with dpkg
   become: true
   shell:
-    command: dpkg --install --yes bat_v_amd64.deb
+    command: "dpkg --install --yes {{ debian_tmp }}/bat.deb"
 
 - name: DEBIAN | Remove deb-file
    file:
-    path: 
+    path: "{{ debian_tmp }}/bat.deb"
     state: absent
