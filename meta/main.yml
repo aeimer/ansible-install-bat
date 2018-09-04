@@ -6,9 +6,13 @@ galaxy_info:
   min_ansible_version: 2.0
 
   platforms:
+  - name: Debian
   - name: Ubuntu
-    versions:
-    - all
+  - name: ArchLinux
+  - name: VoidLinux
+  - name: ARM
+  - name: MacOS
+  - name: FreeBSD
 
   galaxy_tags:
   - cat
