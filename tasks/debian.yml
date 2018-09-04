@@ -7,8 +7,8 @@
 
 - name: DEBIAN | Install with dpkg
   become: true
-  shell:
-    command: "dpkg --install --yes {{ debian_tmp }}/bat.deb"
+  apt:
+    deb: {{ debian_tmp }}/bat.deb
 
 - name: DEBIAN | Remove deb-file
   file:
