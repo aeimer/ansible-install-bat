@@ -1,11 +1,20 @@
 ---
-- name: GENERAL | Get latest verion from github
-  github_release:
-    user: "{{ gh_user }}"
-    repo: "{{ gh_repo }}"
-    action: latest_release
-  when: bat_version == ''
-  register: bat_version
+- name: GENERAL | Get current version of docker-compose
+  shell: >
+      warn=False
+      curl --silent https://api.github.com/repos/{{ gh_user }}/{{ gh_repo }}/releases/latest |
+      grep '"tag_name":' |
+      grep -Po '[0-9.]+'
+  register: command_result
+  failed_when: >
+    command_result.rc != 0 or
+    not command_result.stdout|regex_search('\w+\.\w+\.\w+')
+  when: bat_version is empty
+
+- name: GENERAL | Set latest version of docker-compose
+  set_fact:
+    bat_version: "{{ command_result.stdout }}"
+  when: bat_version is empty
 
 - name: GENERAL | Set URLs to download bins
   set_fact:
