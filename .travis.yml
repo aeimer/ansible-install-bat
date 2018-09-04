@@ -34,10 +34,10 @@ script:
   # Basic role syntax check
   - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
   # Run the role/playbook with ansible-playbook.
-  - ansible-playbook -i tests/inventory tests/test.yml --connection=local --sudo
+  - ansible-playbook -i tests/inventory tests/test.yml --connection=local --become-user
   # Run the role/playbook again, checking to make sure it's idempotent.
   - >
-    ansible-playbook -i tests/inventory tests/test.yml --connection=local --sudo
+    ansible-playbook -i tests/inventory tests/test.yml --connection=local --become-user
     | tee /dev/tty
     | grep -q "changed=$IDEM_CHANGED.*failed=$IDEM_FAILED"
     && (echo 'Idempotence test: pass' && exit 0)
