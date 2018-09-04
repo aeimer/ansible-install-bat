@@ -9,12 +9,12 @@
   failed_when: >
     command_result.rc != 0 or
     not command_result.stdout|regex_search('\w+\.\w+\.\w+')
-  when: bat_version is ''
+  when: bat_version == ~
 
 - name: GENERAL | Set latest version of docker-compose
   set_fact:
     bat_version: "{{ command_result.stdout }}"
-  when: bat_version is ''
+  when: bat_version == ''
 
 - name: GENERAL | Set URLs to download bins
   set_fact:
