@@ -1,10 +1,12 @@
 # Ansible role to install bat
 Installs [bat](https://github.com/sharkdp/bat) (a cat replacement) via [Ansible](https://ansible.com).
 
+<!--
 ## Variables
 | Name | Default Value | Description |
 | ---- | ------------- | ----------- |
 |  |  |  |
+-->
 
 ## Example Playbook
 ```bash
@@ -12,3 +14,6 @@ Installs [bat](https://github.com/sharkdp/bat) (a cat replacement) via [Ansible]
   roles:
     - aeimer.install-bat
 ```
+
+## Known Issues
+- This is only tested with Ubuntu
