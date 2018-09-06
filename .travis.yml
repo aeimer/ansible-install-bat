@@ -27,6 +27,10 @@ install:
   - printf '[defaults]\nroles_path=../' >ansible.cfg
 
 script:
+  - curl https://api.github.com/repos/sharkdp/bat/releases/latest
+  - curl https://api.github.com/repos/sharkdp/bat/releases/latest
+  - curl https://api.github.com/repos/sharkdp/bat/releases/latest
+  - curl https://api.github.com/repos/sharkdp/bat/releases/latest
   # Basic role syntax check
   - ansible-playbook -vv -i tests/inventory tests/test.yml --syntax-check
   # Run the role/playbook with ansible-playbook.
