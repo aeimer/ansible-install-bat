@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: install-bat
   author: Alexander Eimer
   description: Install bat, a cat replacement
 
@@ -20,3 +21,4 @@ galaxy_info:
   - linux
   - console
 
+  dependencies: []
