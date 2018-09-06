@@ -28,12 +28,12 @@ install:
 
 script:
   # Basic role syntax check
-  - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
+  - ansible-playbook -vv -i tests/inventory tests/test.yml --syntax-check
   # Run the role/playbook with ansible-playbook.
-  - ansible-playbook -i tests/inventory tests/test.yml --connection=local --become
+  - ansible-playbook -vv -i tests/inventory tests/test.yml --connection=local --become
   # Run the role/playbook again, checking to make sure it's idempotent.
   - >
-    ansible-playbook -i tests/inventory tests/test.yml --connection=local --become
+    ansible-playbook -vv -i tests/inventory tests/test.yml --connection=local --become
     | tee /dev/tty
     | grep -q "changed=$IDEM_CHANGED.*failed=$IDEM_FAILED"
     && (echo 'Idempotence test: pass' && exit 0)
