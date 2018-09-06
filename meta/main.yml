@@ -10,8 +10,7 @@ galaxy_info:
   - name: Debian
   - name: Ubuntu
   - name: ArchLinux
-  - name: VoidLinux
-  - name: ARM
+  - name: Void Linux
   - name: MacOS
   - name: FreeBSD
 
