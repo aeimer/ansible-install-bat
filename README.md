@@ -1,6 +1,8 @@
 # Ansible role to install bat
 Installs [bat](https://github.com/sharkdp/bat) (a cat replacement) via [Ansible](https://ansible.com).
 
+[![Build Status](https://travis-ci.org/aeimer/ansible-install-bat.svg?branch=master)](https://travis-ci.org/aeimer/ansible-install-bat)
+
 ---
 
 - [Ansible Galaxy: aeimer.install_bat](https://galaxy.ansible.com/aeimer/install_bat)
