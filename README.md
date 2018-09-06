@@ -14,7 +14,13 @@ Installs [bat](https://github.com/sharkdp/bat) (a cat replacement) via [Ansible]
 -->
 
 ## Example Playbook
+To install the role:
 ```bash
+ansible-galaxy install aeimer.install_bat
+```
+
+To run the role in a playbook:
+```yaml
 - host: localhost
   roles:
     - aeimer.install_bat
