@@ -12,7 +12,7 @@ Installs [bat](https://github.com/sharkdp/bat) (a cat replacement) via [Ansible]
 ```bash
 - host: localhost
   roles:
-    - aeimer.install-bat
+    - aeimer.install_bat
 ```
 
 ## Known Issues
