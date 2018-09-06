@@ -1,5 +1,7 @@
 ---
 # This is for arm
+- import_tasks: github.yml
+
 - name: ARM | Unpack tar
   unarchive:
     src: "{{ arm_url }}"

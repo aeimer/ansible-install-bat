@@ -1,5 +1,7 @@
 ---
 # This is for Debian/Ubuntu
+- import_tasks: github.yml
+
 - name: DEBIAN | Download deb-file
   get_url:
     url: "{{ debian_url }}"
