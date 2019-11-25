@@ -22,4 +22,4 @@
 - name: ARM | Remove folder
   file:
     path: "{{ arm_tmp }}"
-    state: abesent
+    state: absent
